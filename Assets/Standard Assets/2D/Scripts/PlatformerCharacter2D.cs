@@ -20,18 +20,6 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
-
-
-
-
-		void OnCollisionEnter2D(Collision2D coll) {
-			if (coll.gameObject.tag == "coll")
-				m_AirControl = false;
-			else
-				m_AirControl = true;
-		}
-
-
         private void Awake()
         {
             // Setting up references.
@@ -58,8 +46,6 @@ namespace UnityStandardAssets._2D
 
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
-
-
         }
 
 
@@ -125,7 +111,4 @@ namespace UnityStandardAssets._2D
             transform.localScale = theScale;
         }
     }
-
-
-
 }
